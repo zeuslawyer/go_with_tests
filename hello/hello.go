@@ -12,7 +12,8 @@ func Hello(name string, language string) (greeting string) {
 	}
 
 	suffix := name + "!"
-	return makePrefix(language) + suffix
+	greeting = makePrefix(language) + suffix
+	return greeting
 }
 
 func makePrefix(language string) (prefix string) {
@@ -30,10 +31,3 @@ func makePrefix(language string) (prefix string) {
 func main() {
 	fmt.Println("Hello, World! I am learning me some Golang!")
 }
-
-// if language == SPANISH {
-//   return "Hola, " + name + "!"
-// }
-// if language == FRENCH {
-//   return "Bonjour, " + name + "!"
-// }
